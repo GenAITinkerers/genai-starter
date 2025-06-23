@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  text_embedding:
+    build: .
+    command: python -m genai_start.101_text_embedding.py
+    volumes:
+      - ./data:/app/data
+
+  config_runner:
+    build: .
+    command: python -m genai_start.201_doc_embedding.py
+    volumes:
+      - ./data:/app/data
