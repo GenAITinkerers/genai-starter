@@ -6,8 +6,11 @@ WORKDIR /app
 COPY setup.py setup.cfg README.md ./
 COPY src ./src
 
-# Install the package
+# Install the package and dependencies
 RUN pip install --upgrade pip && pip install .
 
-# Default command (can be overridden by docker-compose)
-CMD ["python", "-m", "genai_start.101_text_embedding"]
+# Set PYTHONPATH so Python can find your package
+ENV PYTHONPATH=/app/src
+
+# Default command to run the read text embedding service
+CMD ["python", "-m", "genai_start.202_read_text_embedding_service"]
