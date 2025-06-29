@@ -17,9 +17,10 @@ def read_document_embedding_from_file(folder_path, file_name):
         return pickle.load(f)
     
 
-if __name__ == "__main__":
+def main():
     """
-    Read the document embedding from a file and print its type and length.
+    Main function to read the document embedding from a file and print its type and length.
+    
     This is a sample document embedding service.
     It reads the embedding from a file and prints its type and length.
     The embedding is saved in a pickle file.
@@ -40,3 +41,7 @@ if __name__ == "__main__":
         print(embedding_statistics)
     finally:
         print(f"Embedding read from {os.path.join(folder_path, file_name)}")
+    
+
+if __name__ == "__main__":
+    main()

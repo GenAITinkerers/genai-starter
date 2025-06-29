@@ -24,10 +24,10 @@ def embed_documents_and_save(documents, folder_path, file_name):
     finally:
         print(f"Embedding saved to {file_path}")
 
-
-if __name__ == "__main__":
+def main():
     """
-    Embed documents and save them to a file.
+    Main function to embed documents and save them to a file.
+    
     This is a sample document embedding service.
     It embeds a list of documents and saves the embeddings to a file.
     The embedding is done using the GoogleGenerativeAIEmbeddings class.
@@ -36,8 +36,6 @@ if __name__ == "__main__":
     """
     # Set environment variables
     set_environment()
-
-    # Example documents to embed
     try:
         folder_path = os.getenv("DOCUMENT_EMBEDDING_FOLDER_PATH", "data/embeddings/document_embeddings/")
         file_name = os.getenv("DOCUMENT_EMBEDDING_FILE_NAME", "embed_doc1.pkl")
@@ -49,3 +47,7 @@ if __name__ == "__main__":
 
     finally:
         print(f"Embedding saved to {os.path.join(folder_path, file_name)}")
+
+
+if __name__ == "__main__":
+    main()
