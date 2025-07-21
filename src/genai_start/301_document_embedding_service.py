@@ -38,9 +38,9 @@ def main():
     set_environment()
     try:
         folder_path = os.getenv("DOCUMENT_EMBEDDING_FOLDER_PATH", "data/embeddings/document_embeddings/")
-        file_name = os.getenv("DOCUMENT_EMBEDDING_FILE_NAME", "embed_doc1.pkl")
+        file_name = os.getenv("DOCUMENT_EMBEDDING_FILE_NAME", "embed_doc2.pkl")
 
-        documents = ["Hello world", "Goodbye world"]
+        documents = ["Hello world", "Goodbye world, i am good here", "I am a software engineer"]
 
         # Embed the documents and save them to a file
         embed_documents_and_save(documents, folder_path=folder_path, file_name=file_name)

@@ -28,7 +28,7 @@ def main():
     """
     try:
         folder_path = os.getenv("TEXT_EMBEDDING_FOLDER_PATH", "data/embeddings/text_embeddings/")
-        file_name = os.getenv("TEXT_EMBEDDING_FILE_NAME", "first_embed2.pkl")
+        file_name = os.getenv("TEXT_EMBEDDING_FILE_NAME", "first_embed3.pkl")
         # Read the embedding from the file
         text_embedding = read_embedding_from_file(folder_path=folder_path, file_name=file_name)
 
