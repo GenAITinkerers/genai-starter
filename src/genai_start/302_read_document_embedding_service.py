@@ -28,7 +28,7 @@ def main():
     """
     try:
         folder_path = os.getenv("DOCUMENT_EMBEDDING_FOLDER_PATH", "data/embeddings/document_embeddings/")
-        file_name = os.getenv("DOCUMENT_EMBEDDING_FILE_NAME", "embed_doc1.pkl")
+        file_name = os.getenv("DOCUMENT_EMBEDDING_FILE_NAME", "embed_doc2.pkl")
 
         # Read the embedding from the file
         document_embedding = read_document_embedding_from_file(folder_path=folder_path, file_name=file_name)
