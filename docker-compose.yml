@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  read_embedding:
+    build: .
+    image: genai-starter
+    volumes:
+      - ./data:/app/data
+    command: ["python", "src/genai_start/202_read_text_embedding_service.py"]
+  read_document:
+    build: .
+    image: genai-starter
+    volumes:
+      - ./data:/app/data
+    command: ["python", "src/genai_start/302_read_document_embedding_service.py"]
+
+  # Add more services for each file in genai_start

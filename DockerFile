@@ -1,0 +1,16 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# Copy project files
+COPY setup.py setup.cfg README.md ./
+COPY src ./src
+
+# Install the package and dependencies
+RUN pip install --upgrade pip && pip install .
+
+# Set PYTHONPATH so Python can find your package
+ENV PYTHONPATH=/app/src
+
+# Default command to run the read text embedding service
+CMD ["python", "-m", "genai_start.202_read_text_embedding_service"]
