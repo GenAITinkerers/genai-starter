@@ -10,7 +10,7 @@ from config import set_environment
 # ### Set environment variables
 set_environment()
 
-# os.environ['GOOGLE_API_KEY']
+os.environ['GOOGLE_API_KEY']
 
 
 # ### Create an instance of the GoogleGenerativeAIEmbeddings class
@@ -49,7 +49,7 @@ def main():
     """
     try:
         folder_path = os.getenv("TEXT_EMBEDDING_FOLDER_PATH", "data/embeddings/text_embeddings/")
-        file_name = os.getenv("TEXT_EMBEDDING_FILE_NAME", "first_embed3.pkl")
+        file_name = os.getenv("TEXT_EMBEDDING_FILE_NAME", "first_embed5.pkl")
 
         text = "This is a sample text for embedding."
 
